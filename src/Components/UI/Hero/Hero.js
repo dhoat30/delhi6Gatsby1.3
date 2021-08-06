@@ -4,11 +4,11 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 import Link from '../Link/Link'
 import SectionTitle from '../Titles/SectionTitle'
 import Overlay from '../../UI/Overlay/Overlay'
-
+import Logo from '../Logo/Logo'
 function Hero(props) {
     const image = getImage(props.data.imageSharp)
     const mobileImage = getImage(props.data.mobileImage)
-
+    console.log(props.data)
     return (
         <Container>
             <Overlay show={true}></Overlay>
@@ -38,13 +38,18 @@ const Container = styled.div`
 
 const Content = styled.div`
 position: absolute;
-top: 50%;
-z-index: 10;
 transform: translate(0, -50%);
+    top: 50%;
+z-index: 10;
 max-width: 600px;
 @media(max-width: 800px ){
     top: 130px;
 }
+`
+
+const LogoContainer = styled(Logo)`
+ margin: 0 auto 0 0 !important;
+ border: solid red;
 `
 const DesktopImage = styled(GatsbyImage)`
 height: ${props => props.$mediumheight ? "300px" : '100%'};

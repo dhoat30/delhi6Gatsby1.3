@@ -32,8 +32,8 @@ function AboutContent(props) {
 
                     <Content>
                         <ImageCardStyle
-                            image={props.dataObject.firstImage}
-                            title={props.dataObject.firstTitle} />
+                            image={props.dataObject.secondImage}
+                            title={props.dataObject.secondTitle} />
 
 
                         <WallpaperPatternStyle img={true} />
@@ -42,12 +42,34 @@ function AboutContent(props) {
                             <MediumFontsStyle color="white"
                                 align="center">
 
-                                {props.dataObject.firstContent}
+                                {props.dataObject.secondContent}
                             </MediumFontsStyle>
                         </div>
 
                     </Content>
                 </SecondSection>
+
+                <ThirdSection>
+
+
+                    <ThirdContent>
+                        <ImageCardStyle
+                            image={props.dataObject.managerImage}
+                            title={props.dataObject.managerTitle} />
+
+
+                        <WallpaperPatternStyle img={true} />
+                        <div>
+                            <SectionTitle subTitle={props.dataObject.managerSubtitle}> {props.dataObject.managerTitle} </SectionTitle>
+                            <MediumFontsStyle color="white"
+                                align="center">
+
+                                {props.dataObject.managerContent}
+                            </MediumFontsStyle>
+                        </div>
+
+                    </ThirdContent>
+                </ThirdSection>
 
             </AboutContentStyle>
         </div>
@@ -75,6 +97,20 @@ const FirstSection = styled.section``
 const SecondSection = styled.section`
  margin: 200px 0 0 0;
 `
+
+const ThirdSection = styled.section`
+ margin-top: 150px;
+`
+
+const ThirdContent = styled(Content)`
+    flex-direction: row-reverse;
+    @media(max-width: 1260px){ 
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+`
 const MediumFontsStyle = styled(MediumFonts)`
 width: 100%;
 max-width: 500px;
@@ -88,12 +124,14 @@ width: 100%;
 max-width: 300px;
 @media(max-width: 1260px){
     margin: 0 0 40px 0;
+    display: none;
 }
 `
 const ImageCardStyle = styled(ImageCard)`
  width: 100%;
  max-width: 300px;
-
+height: 400px;
+margin-bottom: 20px;
 `
 
 

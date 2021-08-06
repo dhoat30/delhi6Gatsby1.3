@@ -33,7 +33,7 @@ function Header() {
   return (
     <Container>
       <div className="row-container flex flex-justify-between flex-align-center flex-row">
-        <Link to="/"> <Logo header={true} /></Link>
+        <LogoStyle to="/"> <Logo header={true} width="180px" /></LogoStyle>
         <div className="row-container flex flex-justify-end flex-row flex-align-center">
           <Navbar orderOnline={dataArray[0].orderOnlineLink} />
           <AnchorLinkStyle background={true} mobileIcon={true} link={dataArray[0].orderOnlineLink} targetBlank={true}>  Order Online </AnchorLinkStyle>
@@ -61,5 +61,12 @@ const AnchorLinkStyle = styled(AnchorLink)`
     display: none;
 }
 `
-
+const LogoStyle = styled(Link)`
+@media(min-width: 1000px){ 
+  position: absolute;
+ top: 10px;
+ z-index: 10;
+}
+ 
+`
 export default Header

@@ -80,6 +80,9 @@ top: -170px;
 transform: rotate(15deg);
 left: 0;
 z-index: 2;
+@media (max-width: 700px){
+  display: none;
+}
 `
 const SecondPattern = styled.div`
 position: absolute;
@@ -87,6 +90,9 @@ bottom: -170px;
 right: 0;
 transform: rotate(195deg);
 z-index: 3;
+@media (max-width: 700px){
+  display: none;
+}
 `
 const ButtonStyle = styled(Button)`
 margin: 20px auto 0 auto;

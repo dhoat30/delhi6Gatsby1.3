@@ -3,6 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: `/gatsby`,
   siteMetadata: {
     siteUrl: "https://delhi6.co.nz",
     title: "Delhi 6 Paihia",
@@ -29,7 +30,6 @@ module.exports = {
       options: {
         // url: process.env.WORDPRESS_URL,
         url: "https://delhi6.co.nz/data/graphql"
-
       },
     },
     "gatsby-plugin-styled-components",

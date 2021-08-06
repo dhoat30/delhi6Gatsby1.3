@@ -34,7 +34,7 @@ function FAQSection() {
   return (
     <React.Fragment>
       {
-        dataArray[0].title ?
+        dataArray[0] ?
           <Container>
             <Box>
               <SectionTitle subTitle="Ask us a question">Frequently Asked Questions</SectionTitle>

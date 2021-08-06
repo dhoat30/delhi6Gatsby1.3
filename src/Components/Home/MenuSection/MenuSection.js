@@ -26,6 +26,8 @@ const query = graphql`
 }
 `
 function MenuSection() {
+
+
   const data = useStaticQuery(query)
 
   const dataArray = data.allWpMenuImage.edges.map(edge => {
@@ -36,9 +38,26 @@ function MenuSection() {
     }
   })
 
+  //get menu link
+  // const [menuArray, setMenuArray] = useState([])
+  // let menuItemsArray
+  // using use effect so it won't keep re running on state change
+  // useEffect(() => {
+  //   axios(`https://delhi6.co.nz/data/wp-json/wp/v2/menu_images`)
+  //     .then(res => {
+  //       setMenuArray(res.data)
+  //     }).catch(err => {
+  //       console.log(err)
+  //     })
+
+  //   // fetch images 
+  // }, [])
+
+
+
   const card = dataArray.map(data => {
     return (
-      <Card key={data.id} to={data.title.includes('DINE') ? '/dine-in-menu' : '/menu '}>
+      <Card key={data.id} to={data.title.includes('DINE') ? '/dine-in-menu' : 'https://delhi6.co.nz/data/wp-content/uploads/2021/07/takwaway-menu.pdf'}>
         <ImageCard image={data.image} title={data.title} />
         <ColumnTitle align="center">{data.title}</ColumnTitle>
       </Card>

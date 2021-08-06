@@ -70,7 +70,7 @@ function Footer() {
       </SocialContainer>
 
       <CopyrightContainer>
-        <MediumFonts color="white" align="center">© {infoObject.copyright} </MediumFonts>
+        <MediumFonts style={{ textTransform: 'upper-case' }} color="white" align="center">© {infoObject.copyright} </MediumFonts>
         <Webduel href="https://webduel.co.nz"> <MediumFonts hover={true} color="white">Built By Web<span className="gold bold">Duel</span></MediumFonts></Webduel>
       </CopyrightContainer>
 
@@ -102,6 +102,7 @@ margin: 30px auto 0 auto;
 `
 const SocialUnderline = styled.a`
 position: relative;
+margin:20px 0 0 0;
 
 &:hover{ 
   color: var(--lightGold) !important;

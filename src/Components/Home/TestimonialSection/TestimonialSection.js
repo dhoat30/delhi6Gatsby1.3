@@ -49,10 +49,11 @@ function TestimonialSection() {
 const Container = styled.section`
 background-color: var(--darkGrey);
 position: relative;
+height: auto;
 `
 const TestimonialBox = styled.div`
 padding: 100px 0;
-height: 500px;
+height: auto;
 background-color: var(--darkGrey);
 position: absolute;
 top: 50%;
